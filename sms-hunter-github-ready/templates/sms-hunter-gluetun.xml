@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>sms-hunter-gluetun</Name>
+  <Repository>qmcgaw/gluetun:v3</Repository>
+  <Registry>https://hub.docker.com/r/qmcgaw/gluetun</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/qdm12/gluetun-wiki</Support>
+  <Project>https://github.com/qdm12/gluetun</Project>
+  <Overview>Dedizierter Türkei-VPN-Tunnel für sms-hunter. Diese Instanz ist vollständig von anderen VPN-Containern getrennt.</Overview>
+  <Category>Network:VPN</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/REPLACE_GITHUB_USER/sms-hunter-unraid/main/templates/sms-hunter-gluetun.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/REPLACE_GITHUB_USER/sms-hunter-unraid/main/icons/sms-hunter.svg</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN --device=/dev/net/tun:/dev/net/tun</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <Config Name="Gluetun-Daten" Target="/gluetun" Default="/mnt/cache/appdata/sms-hunter/gluetun" Mode="rw" Description="Eigener Konfigurationsordner auf dem Cache-Pool" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/sms-hunter/gluetun</Config>
+  <Config Name="VPN-Anbieter" Target="VPN_SERVICE_PROVIDER" Default="protonvpn" Mode="" Description="Von Gluetun unterstützter VPN-Anbieter" Type="Variable" Display="always" Required="true" Mask="false">protonvpn</Config>
+  <Config Name="VPN-Typ" Target="VPN_TYPE" Default="wireguard" Mode="" Description="VPN-Protokoll" Type="Variable" Display="always" Required="true" Mask="false">wireguard</Config>
+  <Config Name="WireGuard PrivateKey" Target="WIREGUARD_PRIVATE_KEY" Default="" Mode="" Description="PrivateKey aus der Proton-WireGuard-Konfiguration" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Server-Land" Target="SERVER_COUNTRIES" Default="Turkey" Mode="" Description="VPN-Ausgangsland" Type="Variable" Display="always" Required="true" Mask="false">Turkey</Config>
+  <Config Name="Zeitzone" Target="TZ" Default="Europe/Berlin" Mode="" Description="Zeitzone für Protokolle" Type="Variable" Display="advanced" Required="true" Mask="false">Europe/Berlin</Config>
+  <Config Name="Serverlisten-Update" Target="UPDATER_PERIOD" Default="480h" Mode="" Description="Aktualisierungsintervall der Serverliste" Type="Variable" Display="advanced" Required="false" Mask="false">480h</Config>
+</Container>

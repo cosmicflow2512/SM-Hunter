@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>sms-hunter</Name>
+  <Repository>ghcr.io/REPLACE_GITHUB_USER/sms-hunter:latest</Repository>
+  <Registry>https://github.com/REPLACE_GITHUB_USER/sms-hunter-unraid/pkgs/container/sms-hunter</Registry>
+  <Network>container:sms-hunter-gluetun</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/REPLACE_GITHUB_USER/sms-hunter-unraid/issues</Support>
+  <Project>https://github.com/REPLACE_GITHUB_USER/sms-hunter-unraid</Project>
+  <Overview>Reserviert eine passende türkische SMS-Nummer und meldet Nummer sowie eingehenden Code über Pushover. Verwendet ausschließlich den Netzwerkpfad von sms-hunter-gluetun.</Overview>
+  <Category>Tools: Network:Other</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/REPLACE_GITHUB_USER/sms-hunter-unraid/main/templates/sms-hunter.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/REPLACE_GITHUB_USER/sms-hunter-unraid/main/icons/sms-hunter.svg</Icon>
+  <ExtraParams>--read-only --tmpfs=/tmp:rw,noexec,nosuid,size=16m --cap-drop=ALL --security-opt=no-new-privileges:true</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <Config Name="SMS API-Key" Target="SMS_API_KEY" Default="" Mode="" Description="API-Schlüssel des SMS-Anbieters" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Dienst-Code" Target="SMS_SERVICE" Default="wx" Mode="" Description="Dienstkennung des SMS-Anbieters" Type="Variable" Display="always" Required="true" Mask="false">wx</Config>
+  <Config Name="Land-Code" Target="SMS_COUNTRY" Default="62" Mode="" Description="Länderkennung des SMS-Anbieters" Type="Variable" Display="always" Required="true" Mask="false">62</Config>
+  <Config Name="Maximalpreis" Target="MAX_PRICE" Default="5" Mode="" Description="Maximalpreis pro Reservierung; kein Gesamtbudget" Type="Variable" Display="always" Required="true" Mask="false">5</Config>
+  <Config Name="Bevorzugte Anbieter" Target="PRIORITY_PROVIDERS" Default="406,393,405,311" Mode="" Description="Kommagetrennte Anbieterkennungen" Type="Variable" Display="advanced" Required="false" Mask="false">406,393,405,311</Config>
+  <Config Name="Ausgeschlossene Anbieter" Target="EXCLUDED_PROVIDERS" Default="396,415,418,12,162,25,405" Mode="" Description="Kommagetrennte Ausschlussliste" Type="Variable" Display="advanced" Required="false" Mask="false">396,415,418,12,162,25,405</Config>
+  <Config Name="Versuche pro Zyklus" Target="BURST" Default="4" Mode="" Description="Priorisierte Versuche pro Zyklus" Type="Variable" Display="advanced" Required="true" Mask="false">4</Config>
+  <Config Name="Zykluspause" Target="CYCLE_PAUSE" Default="8" Mode="" Description="Pause zwischen Zyklen in Sekunden" Type="Variable" Display="advanced" Required="true" Mask="false">8</Config>
+  <Config Name="Statusintervall" Target="POLL_INTERVAL" Default="5" Mode="" Description="Abfrageintervall in Sekunden" Type="Variable" Display="advanced" Required="true" Mask="false">5</Config>
+  <Config Name="Haltezeit" Target="HOLD_SECONDS" Default="900" Mode="" Description="Maximale Haltezeit einer Reservierung in Sekunden" Type="Variable" Display="advanced" Required="true" Mask="false">900</Config>
+  <Config Name="Reservierungen pro Lauf" Target="MAX_RESERVATIONS" Default="1" Mode="" Description="Kostensicherung; Standard ist eine Reservierung je Start" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Erwartetes VPN-Land" Target="EXPECTED_EGRESS_COUNTRY" Default="TR" Mode="" Description="Bei einer anderen Ausgangsregion wird vor jedem Kauf abgebrochen" Type="Variable" Display="always" Required="true" Mask="false">TR</Config>
+  <Config Name="Pushover Application Token" Target="PUSHOVER_APP_TOKEN" Default="" Mode="" Description="Application API Token von Pushover" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Pushover User Key" Target="PUSHOVER_USER_KEY" Default="" Mode="" Description="Benutzer- oder Gruppenschlüssel von Pushover" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Pushover-Gerät" Target="PUSHOVER_DEVICE" Default="" Mode="" Description="Optionaler Gerätename; leer sendet an alle Geräte" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Pushover-Priorität" Target="PUSHOVER_PRIORITY" Default="1" Mode="" Description="1 umgeht konfigurierte Ruhezeiten" Type="Variable" Display="advanced" Required="true" Mask="false">1</Config>
+</Container>
