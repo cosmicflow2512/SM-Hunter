@@ -4,16 +4,15 @@ Headless SMS reservation monitor with a dedicated Gluetun tunnel and Pushover
 notifications. The hunter refuses to reserve a number unless its public VPN
 egress reports country code `TR`.
 
-## Prepare the repository
+## Repository status
 
-1. Create a new public repository named `sms-hunter-unraid`.
-2. Run `python3 prepare_repository.py your-lowercase-github-name`. This fills
-   the image and template URLs automatically.
-3. Upload all files, including the hidden `.github` directory, and push to the
-   `main` branch.
-4. Open the repository's Actions tab and wait for **Build and publish
+This repository is configured for `cosmicflow2512/SM-Hunter`.
+
+1. Push all files, including the hidden `.github` directory, to the `main`
+   branch.
+2. Open the repository's Actions tab and wait for **Build and publish
    container** to complete.
-5. Open the newly created `sms-hunter` package and change its visibility to
+3. Open the newly created `sms-hunter` package and change its visibility to
    **Public** so Unraid can pull it without registry credentials.
 
 ## Install the Unraid templates

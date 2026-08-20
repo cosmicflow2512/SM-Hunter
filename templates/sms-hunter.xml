@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>sms-hunter</Name>
-  <Repository>ghcr.io/REPLACE_GITHUB_USER/sms-hunter:latest</Repository>
-  <Registry>https://github.com/REPLACE_GITHUB_USER/sms-hunter-unraid/pkgs/container/sms-hunter</Registry>
+  <Repository>ghcr.io/cosmicflow2512/sms-hunter:latest</Repository>
+  <Registry>https://github.com/cosmicflow2512/SM-Hunter/pkgs/container/sms-hunter</Registry>
   <Network>container:sms-hunter-gluetun</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/REPLACE_GITHUB_USER/sms-hunter-unraid/issues</Support>
-  <Project>https://github.com/REPLACE_GITHUB_USER/sms-hunter-unraid</Project>
+  <Support>https://github.com/cosmicflow2512/SM-Hunter/issues</Support>
+  <Project>https://github.com/cosmicflow2512/SM-Hunter</Project>
   <Overview>Reserviert eine passende türkische SMS-Nummer und meldet Nummer sowie eingehenden Code über Pushover. Verwendet ausschließlich den Netzwerkpfad von sms-hunter-gluetun.</Overview>
   <Category>Tools: Network:Other</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/REPLACE_GITHUB_USER/sms-hunter-unraid/main/templates/sms-hunter.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/REPLACE_GITHUB_USER/sms-hunter-unraid/main/icons/sms-hunter.svg</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/cosmicflow2512/SM-Hunter/main/templates/sms-hunter.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/cosmicflow2512/SM-Hunter/main/icons/sms-hunter.svg</Icon>
   <ExtraParams>--read-only --tmpfs=/tmp:rw,noexec,nosuid,size=16m --cap-drop=ALL --security-opt=no-new-privileges:true</ExtraParams>
   <PostArgs/>
   <CPUset/>

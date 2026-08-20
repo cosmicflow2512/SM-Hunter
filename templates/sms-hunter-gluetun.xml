@@ -12,8 +12,8 @@
   <Overview>Dedizierter Türkei-VPN-Tunnel für sms-hunter. Diese Instanz ist vollständig von anderen VPN-Containern getrennt.</Overview>
   <Category>Network:VPN</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/REPLACE_GITHUB_USER/sms-hunter-unraid/main/templates/sms-hunter-gluetun.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/REPLACE_GITHUB_USER/sms-hunter-unraid/main/icons/sms-hunter.svg</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/cosmicflow2512/SM-Hunter/main/templates/sms-hunter-gluetun.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/cosmicflow2512/SM-Hunter/main/icons/sms-hunter.svg</Icon>
   <ExtraParams>--cap-add=NET_ADMIN --device=/dev/net/tun:/dev/net/tun</ExtraParams>
   <PostArgs/>
   <CPUset/>
